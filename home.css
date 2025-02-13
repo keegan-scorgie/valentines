@@ -1,0 +1,63 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #C8A2C8 ;
+}
+
+.main{
+    color: #ffffc5;
+}
+
+.main h1{
+    text-align: center;
+    font-size: 100px;
+}
+
+.main h2{
+    text-align: center;
+    color: lightgray;
+  
+}
+
+.main img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    display: block;
+    height: 40%;
+}
+.button-container{
+    display: flex;
+    justify-content: center; 
+    gap: 1px;
+}
+#yesButton{
+    margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
+    background-color: lightcoral;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid black;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+
+}
+
+#noButton{
+    margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
+    background-color: lightcoral;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid black;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+
+}
