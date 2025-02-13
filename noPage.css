@@ -66,6 +66,7 @@ body {
     vertical-align: middle; /* Align text vertically */
     box-sizing: border-box; /* Ensure padding doesn't mess with size */
     transition: background-color 0.3s ease;
+    font-family: sans-serif;
 }
 
 #yesButton:hover, #yesButton2:hover {
