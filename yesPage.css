@@ -1,27 +1,70 @@
-*{
+/* Universal styles */
+* {
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: #C8A2C8 ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main{
+body {
+    background-color: #C8A2C8;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
     color: #ffffc5;
+    text-align: center;
+    padding: 20px;
 }
 
-.main h1{
-    text-align: center;
-    font-size: 100px;
+.main h1 {
+    font-size: 8vw; /* Make the font size responsive */
+    line-height: 1.2;
 }
 
-.main h2{
-    text-align: center;
+.main h2 {
     color: #ffffc5;
-  
+    font-size: 2rem; /* Slightly larger font size */
+    margin-top: 10px;
 }
 
-#spongeVDay{
+#spongeVDay {
+    width: 70%; /* Default width, adjusts on smaller screens */
+    max-width: 500px; /* Limit the max width */
+    height: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    display: block;
-    height: 40%;
+}
+
+/* Mobile-friendly adjustments using media queries */
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 10vw; /* Adjust header size on mobile */
+    }
+
+    .main h2 {
+        font-size: 1.5rem; /* Smaller text for smaller screens */
+    }
+
+    #spongeVDay {
+        width: 90%; /* Make the image larger on smaller screens */
+        max-width: 400px; /* Limit max size */
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 12vw; /* Larger font size for extra small screens */
+    }
+
+    .main h2 {
+        font-size: 1.2rem; /* Adjust h2 font size */
+    }
+
+    #spongeVDay {
+        width: 100%; /* Make image full width on mobile */
+        max-width: 350px; /* Set max width for very small screens */
+    }
 }
