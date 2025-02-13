@@ -1,45 +1,58 @@
-*{
+/* Universal styles */
+* {
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: #C8A2C8 ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main{
+body {
+    background-color: #C8A2C8;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
     color: #ffffc5;
+    text-align: center;
+    padding: 20px;
 }
 
-.main h1{
-    text-align: center;
-    font-size: 100px;
+.main h1 {
+    font-size: 8vw; /* Make font size responsive */
+    line-height: 1.2;
 }
 
-.main h2{
-    text-align: center;
+.main h2 {
     color: #ffffc5;
-  
+    font-size: 2rem; /* Slightly larger font size */
+    margin-top: 10px;
 }
-#sadSponge{
+
+#sadSponge {
+    width: 70%; /* Default width, adjusts on smaller screens */
+    max-width: 500px; /* Limit max width */
+    height: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    display: block;
-    height: 30%;
 }
 
-.main h3{
-    text-align: center;
+.main h3 {
     color: #ffffc5;
+    font-size: 1.5rem; /* Slightly larger text */
     margin-top: 40px;
 }
-.button-container{
+
+/* Button container */
+.button-container {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; 
-    gap: 1px;
+    justify-content: center;
+    gap: 10px; /* Add gap between buttons */
 }
-#yesButton{
-    margin-left: auto;
-    margin-right: auto;
-    display:inline-block;
+
+#yesButton, #yesButton2 {
     background-color: lightcoral;
     border-radius: 5px;
     text-decoration: none;
@@ -49,29 +62,87 @@
     text-align: center;
     line-height: 40px;
     color: black;
-
+    transition: background-color 0.3s ease;
 }
 
-#yesButton2{
-    margin-left: auto;
-    margin-right: auto;
-    display:inline-block;
-    background-color: lightcoral;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 2px solid black;
-    width: 140px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    color: black;
-
+#yesButton:hover, #yesButton2:hover {
+    background-color: darkorange; /* Hover effect */
 }
 
-#happySponge{
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+#happySponge {
+    width: 80%; /* Default width */
+    max-width: 400px; /* Limit max size */
+    height: auto;
     display: block;
-    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile-friendly adjustments using media queries */
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 10vw; /* Adjust font size for smaller screens */
+    }
+
+    .main h2 {
+        font-size: 1.5rem; /* Adjust h2 font size */
+    }
+
+    .main h3 {
+        font-size: 1.2rem; /* Adjust h3 font size */
+    }
+
+    #sadSponge {
+        width: 90%; /* Make image larger on smaller screens */
+        max-width: 400px; /* Limit max width */
+    }
+
+    #happySponge {
+        width: 90%; /* Make happySponge image larger on smaller screens */
+        max-width: 350px; /* Limit max size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    #yesButton, #yesButton2 {
+        width: 100%; /* Full width buttons */
+        margin: 10px 0; /* Space between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 12vw; /* Larger font size for extra small screens */
+    }
+
+    .main h2 {
+        font-size: 1.2rem; /* Adjust h2 font size */
+    }
+
+    .main h3 {
+        font-size: 1rem; /* Adjust h3 font size */
+    }
+
+    #sadSponge {
+        width: 100%; /* Full width for very small screens */
+        max-width: 350px; /* Limit max size */
+    }
+
+    #happySponge {
+        width: 100%; /* Full width for mobile screens */
+        max-width: 300px; /* Limit max size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    #yesButton, #yesButton2 {
+        width: 100%; /* Full width buttons */
+        padding: 15px 0; /* Add padding to buttons */
+    }
 }
