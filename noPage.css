@@ -59,15 +59,19 @@ body {
     border: 2px solid black;
     width: 140px;
     height: 40px;
-    text-align: center;
-    line-height: 40px;
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Center text vertically */
     color: black;
+    display: inline-block;
+    vertical-align: middle; /* Align text vertically */
+    box-sizing: border-box; /* Ensure padding doesn't mess with size */
     transition: background-color 0.3s ease;
 }
 
 #yesButton:hover, #yesButton2:hover {
     background-color: darkorange; /* Hover effect */
 }
+
 
 #happySponge {
     width: 80%; /* Default width */
